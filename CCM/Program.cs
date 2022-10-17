@@ -16,7 +16,7 @@ namespace Starcraft_Mod_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SC2CCM());
+            Application.Run(new FormMain());
         }
     }
 }
