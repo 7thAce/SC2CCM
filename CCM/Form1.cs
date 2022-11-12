@@ -135,7 +135,8 @@ namespace Starcraft_Mod_Manager
                 } else
                 {
                     Log.Fatal("User did not select StarCraft II Installation directory! Exiting application.");
-                    System.Windows.Forms.Application.Exit();
+                    MessageBox.Show("No StarCraft II executable was provided. Please make sure StarCraft II is installed and then try again.");
+                    Environment.Exit(1);
                 }
             }
             sc2BasePath = Path.GetDirectoryName(sc2filePath);
