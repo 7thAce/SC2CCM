@@ -1,9 +1,0 @@
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\bin\Debug\SC2CCM Updater Form.exe.config
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\bin\Debug\SC2CCM Updater Form.exe
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\bin\Debug\SC2CCM Updater Form.pdb
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM Updater Form.csprojAssemblyReference.cache
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM_Updater_Form.Properties.Resources.resources
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM Updater Form.csproj.GenerateResource.cache
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM Updater Form.csproj.CoreCompileInputs.cache
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM Updater Form.exe
-C:\Users\Nicholas\source\repos\SC2CCM Updater Form\obj\Debug\SC2CCM Updater Form.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -113,6 +114,7 @@ namespace Starcraft_Mod_Manager
                 campaign = (int)Campaign.NCO;
                 return;
             }
+            Log.Warning("Mod object had a campaign type of 'None' set!");
             campaign = (int)Campaign.None; //This is a problem!
         }
     }
