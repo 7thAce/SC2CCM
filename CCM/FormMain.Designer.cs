@@ -1,6 +1,6 @@
 ﻿namespace Starcraft_Mod_Manager
 {
-    partial class SC2CCM
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SC2CCM));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.label1 = new System.Windows.Forms.Label();
             this.wolSelectBox = new System.Windows.Forms.ComboBox();
             this.wolTitleBox = new System.Windows.Forms.TextBox();
@@ -798,6 +798,7 @@
             this.Name = "SC2CCM";
             this.Text = "StarCraft II Custom Campaign Manager v1.03";
             this.Load += new System.EventHandler(this.SC2MM_Load);
+            this.Shown += new System.EventHandler(this.SC2MM_Shown);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.SC2CCM_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.SC2CCM_DragEnter);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.SC2CCM_DragOver);

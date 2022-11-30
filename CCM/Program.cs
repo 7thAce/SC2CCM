@@ -1,11 +1,11 @@
-﻿using Serilog;
-using Serilog.Events;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Serilog;
+using Serilog.Events;
 
 namespace Starcraft_Mod_Manager
 {
@@ -48,7 +48,7 @@ namespace Starcraft_Mod_Manager
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SC2CCM());
+            Application.Run(new FormMain());
         }
 
         static string initLogFile()
