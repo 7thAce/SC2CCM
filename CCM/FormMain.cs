@@ -633,12 +633,12 @@ namespace Starcraft_Mod_Manager
             {
                 copyFilesAndFolders(modPath, sc2BasePath + @"\Maps\Campaign");
                 setInfoBoxes();
-                Log.Information("Wings of Liberty campaign changed to {Title}", selectedMod.GetTitle());
+                Log.Information("Wings of Liberty campaign changed to {Title}", selectedMod.Title);
                 logBoxWriteLine("Set Wings Campaign to " + selectedMod.Title + "!");
                 hideWarningImg(wolWarningImg);
             } else
             {
-                Log.Error("Failed to change Wings of Liberty campaign to {Title}", selectedMod.GetTitle());
+                Log.Error("Failed to change Wings of Liberty campaign to {Title}", selectedMod.Title);
                 logBoxWriteLine("ERROR: Could not set Wings campaign - SC2 files in use.");
                 showWarningImg(wolWarningImg);
             }
@@ -661,12 +661,12 @@ namespace Starcraft_Mod_Manager
                     populateModLists();
                     populateDropdowns((int)Campaign.WoL);
                     setInfoBoxes();
-                    Log.Information("Deleted WoL mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Information("Deleted WoL mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("Deleted " + selectedMod.Title + " from local storage.");
                 }
                 else
                 {
-                    Log.Error("Failed to delete WoL mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Error("Failed to delete WoL mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("ERROR: Could not delete " + selectedMod.Title + " - a file may be open somewhere.");
                 }
             }
@@ -699,13 +699,13 @@ namespace Starcraft_Mod_Manager
             {
                 copyFilesAndFolders(modPath, sc2BasePath + @"\Maps\Campaign\swarm");
                 setInfoBoxes();
-                Log.Information("Heart of the Swarm campaign changed to {Title}", selectedMod.GetTitle());
+                Log.Information("Heart of the Swarm campaign changed to {Title}", selectedMod.Title);
                 logBoxWriteLine("Set Swarm Campaign to " + selectedMod.Title + "!");
                 hideWarningImg(hotsWarningImg);
             }
             else
             {
-                Log.Error("Failed to change Heart of the Swarm campaign to {Title}", selectedMod.GetTitle());
+                Log.Error("Failed to change Heart of the Swarm campaign to {Title}", selectedMod.Title);
                 logBoxWriteLine("ERROR: Could not set Swarm campaign - SC2 files in use.");
                 showWarningImg(hotsWarningImg);
             }
@@ -728,12 +728,12 @@ namespace Starcraft_Mod_Manager
                     populateModLists();
                     populateDropdowns((int)Campaign.HotS);
                     setInfoBoxes();
-                    Log.Information("Deleted HotS mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Information("Deleted HotS mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("Deleted " + selectedMod.Title + " from local storage.");
                 }
                 else
                 {
-                    Log.Error("Failed to delete HotS mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Error("Failed to delete HotS mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("ERROR: Could not delete " + selectedMod.Title + " - a file may be open somewhere.");
                 }
             }
@@ -766,13 +766,13 @@ namespace Starcraft_Mod_Manager
             {
                 copyFilesAndFolders(modPath, sc2BasePath + @"\Maps\Campaign\void");
                 setInfoBoxes();
-                Log.Information("Legacy of the Void campaign changed to {Title}", selectedMod.GetTitle());
+                Log.Information("Legacy of the Void campaign changed to {Title}", selectedMod.Title);
                 logBoxWriteLine("Set Void Campaign to " + selectedMod.Title + "!");
                 hideWarningImg(lotvWarningImg);
             }
             else
             {
-                Log.Error("Failed to change Legacy of the Void campaign to {Title}", selectedMod.GetTitle());
+                Log.Error("Failed to change Legacy of the Void campaign to {Title}", selectedMod.Title);
                 logBoxWriteLine("ERROR: Could not set Void campaign - SC2 files in use.");
                 showWarningImg(lotvWarningImg);
             }
@@ -795,12 +795,12 @@ namespace Starcraft_Mod_Manager
                     populateModLists();
                     populateDropdowns((int)Campaign.LotV);
                     setInfoBoxes();
-                    Log.Information("Deleted LotV mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Information("Deleted LotV mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("Deleted " + selectedMod.Title + " from local storage.");
                 }
                 else
                 {
-                    Log.Error("Failed to delete LotV mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Error("Failed to delete LotV mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("ERROR: Could not delete " + selectedMod.Title + " - a file may be open somewhere.");
                 }
             }
@@ -833,13 +833,13 @@ namespace Starcraft_Mod_Manager
             {
                 copyFilesAndFolders(modPath, sc2BasePath + @"\Maps\Campaign\nova");
                 setInfoBoxes();
-                Log.Information("Nova Covert Ops campaign changed to {Title}", selectedMod.GetTitle());
+                Log.Information("Nova Covert Ops campaign changed to {Title}", selectedMod.Title);
                 logBoxWriteLine("Set Nova Campaign to " + selectedMod.Title + "!");
                 hideWarningImg(ncoWarningImg);
             }
             else
             {
-                Log.Error("Failed to change Nova Covert Ops campaign to {Title}", selectedMod.GetTitle());
+                Log.Error("Failed to change Nova Covert Ops campaign to {Title}", selectedMod.Title);
                 logBoxWriteLine("ERROR: Could not set Nova campaign - SC2 files in use.");
                 showWarningImg(ncoWarningImg);
             }
@@ -862,12 +862,12 @@ namespace Starcraft_Mod_Manager
                     populateModLists();
                     populateDropdowns((int)Campaign.NCO);
                     setInfoBoxes();
-                    Log.Information("Deleted NCO mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Information("Deleted NCO mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("Deleted " + selectedMod.Title + " from local storage.");
                 }
                 else
                 {
-                    Log.Error("Failed to delete NCO mod {Title} from local storage", selectedMod.GetTitle());
+                    Log.Error("Failed to delete NCO mod {Title} from local storage", selectedMod.Title);
                     logBoxWriteLine("ERROR: Could not delete " + selectedMod.Title + " - a file may be open somewhere.");
                 }
             }
