@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModManager.StarCraft.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModManager.StarCraft.Base", "..\ModManager.StarCraft.Base\ModManager.StarCraft.Base.csproj", "{AFF2E91D-7789-4C51-8854-106C3890309C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "..\UnitTest\UnitTest.csproj", "{4DFAC87F-D4AC-4CFB-9CC2-F06B1E9B9E65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{AFF2E91D-7789-4C51-8854-106C3890309C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF2E91D-7789-4C51-8854-106C3890309C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF2E91D-7789-4C51-8854-106C3890309C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFAC87F-D4AC-4CFB-9CC2-F06B1E9B9E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFAC87F-D4AC-4CFB-9CC2-F06B1E9B9E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFAC87F-D4AC-4CFB-9CC2-F06B1E9B9E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFAC87F-D4AC-4CFB-9CC2-F06B1E9B9E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

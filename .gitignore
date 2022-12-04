@@ -4,3 +4,7 @@
 
 /.vs
 /CCM/.vs/Starcraft Mod Manager/v16
+/CCM/packages
+/ModManagement.Services.StarCraft/obj/Debug
+/ModManager.StarCraft.Base/obj/Debug
+/UnitTest/obj/Debug
