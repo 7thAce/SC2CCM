@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ public class Updater
      */
     private int CheckForUpdates()
     {
+        Log.Information("Checking for updates");
         int retVar = 0;
         //Sets up the file if it hasn't been made before.
         handleFiles();
@@ -41,11 +43,13 @@ public class Updater
         catch (Exception e)
         {
             //Failed to connect, do not update.
+            Log.Error("Unable to check for updates. Error: {Error}", e.Message);
             return 0;
         }
 
         if (apiResponse.ToString().Contains("API rate limit exceeded"))
         {
+            Log.Warning("Unable to check for updates, API rate limit exceeded!");
             return 0;
         }
 
@@ -61,6 +65,7 @@ public class Updater
             DialogResult dialogResult = MessageBox.Show("It looks like you need an update!\nWould you like to download it?", "StarCraft II Custom Campaign Manager", MessageBoxButtons.YesNo);
             if (dialogResult != DialogResult.Yes)
             {
+                Log.Information("Updates ignored by user");
                 return 0;
             }
         }
@@ -68,7 +73,7 @@ public class Updater
         //Compare what to do and download if needed
         if ((int)mostRecentReleases[1].id != localVersions[1])
         {
-            Console.WriteLine("Looks like the Updater needs an update!  Ironic.");
+            Log.Debug("Looks like the Updater needs an update!  Ironic.");
             using (var client = new WebClient())
             {
                 try
@@ -78,8 +83,7 @@ public class Updater
                 }
                 catch (Exception e)
                 {
-                    Console.Write("Failed to download Updater");
-                    Console.Write(e.Message);
+                    Log.Error("Failed to download Updater. Error: {Error}", e.Message);
                     return 0;
                 }
                 localVersions[1] = (int)mostRecentReleases[1].id;
@@ -88,7 +92,7 @@ public class Updater
 
         if ((int)mostRecentReleases[0].id != localVersions[0])
         {
-            Console.WriteLine("Looks like the Custom Campaign Manager needs an update!");
+            Log.Debug("Looks like the Custom Campaign Manager needs an update!");
             using (var client = new WebClient())
             {
                 try
@@ -98,8 +102,7 @@ public class Updater
                 }
                 catch (Exception e)
                 {
-                    Console.Write("Failed to download SC2CCM");
-                    Console.Write(e.Message);
+                    Log.Error("Failed to download SC2CCM. Error: {Error}", e.Message);
                     return 0;
                 }
                 localVersions[0] = (int)mostRecentReleases[0].id;
@@ -107,6 +110,7 @@ public class Updater
         }
 
         handleFiles(localVersions);  // We're committed.
+        Log.Verbose("Updates ready for installation");
         return retVar; //1 = we need to close and install the new update.
     }
 
@@ -183,6 +187,7 @@ public class Updater
 
     private void RunUpdater(int updateCode)
     {
+        Log.Information("Running Updater");
         //MessageBox.Show("firing and shutting down");
         //System.Threading.Thread.Sleep(1000);
         ProcessStartInfo start = new ProcessStartInfo();
