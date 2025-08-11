@@ -43,6 +43,10 @@ namespace ModManager.StarCraft.Base
             //Copy all the files & Replaces any files with the same name
             foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
             {
+                if (IsGitPath(newPath))
+                {
+                    continue;
+                }
                 File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
             }
         }
