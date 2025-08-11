@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using ModManager.StarCraft.Base.Enums;
 
@@ -50,7 +49,7 @@ namespace ModManager.StarCraft.Base
 
         public static bool IsGitPath(string path)
         {
-            return Regex.IsMatch(path, ".*\\.git.*");
+            return path.Contains(".git");
         }
 
         public static bool TryClearDirectory(string directory, Action<string> reportError)
