@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.IO.Compression;
+using System.Text.RegularExpressions;
 
 namespace ModManager.StarCraft.Services
 {
@@ -18,6 +19,10 @@ namespace ModManager.StarCraft.Services
             string destinationDirectoryFullPath = di.FullName;
             foreach (ZipArchiveEntry file in archive.Entries)
             {
+                if (Regex.IsMatch(file.FullName, ".*\\.git.*"))
+                {
+                    continue;
+                }
                 //MessageBox.Show("ZAE file: " + file);
                 string completeFileName = Path.GetFullPath(Path.Combine(destinationDirectoryFullPath, file.FullName));
 
