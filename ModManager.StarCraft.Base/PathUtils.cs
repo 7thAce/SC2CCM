@@ -32,6 +32,10 @@ namespace ModManager.StarCraft.Base
             //Now Create all of the directories
             foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
             {
+                if (IsGitPath(dirPath))
+                {
+                    continue;
+                }
                 Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
                 Console.WriteLine($"Created Dir at '{dirPath.Replace(sourcePath, targetPath)}'");
             }
@@ -39,8 +43,17 @@ namespace ModManager.StarCraft.Base
             //Copy all the files & Replaces any files with the same name
             foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
             {
+                if (IsGitPath(newPath))
+                {
+                    continue;
+                }
                 File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
             }
+        }
+
+        public static bool IsGitPath(string path)
+        {
+            return path.Contains(".git");
         }
 
         public static bool TryClearDirectory(string directory, Action<string> reportError)
@@ -70,7 +83,7 @@ namespace ModManager.StarCraft.Base
             //TODO: Fix the evo missions
             foreach (string subdir in Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly))
             {
-                if (!(subdir.Contains(@"Campaign\swarm") || subdir.Contains(@"Campaign\void") || subdir.Contains(@"Campaign\nova")))
+                if (!IsGitPath(subdir) && !(subdir.Contains(@"Campaign\swarm") || subdir.Contains(@"Campaign\void") || subdir.Contains(@"Campaign\nova")))
                 {
                     Directory.Delete(subdir, true);
                 }

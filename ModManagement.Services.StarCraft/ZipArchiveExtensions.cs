@@ -18,6 +18,10 @@ namespace ModManager.StarCraft.Services
             string destinationDirectoryFullPath = di.FullName;
             foreach (ZipArchiveEntry file in archive.Entries)
             {
+                if (file.FullName.Contains(".git"))
+                {
+                    continue;
+                }
                 //MessageBox.Show("ZAE file: " + file);
                 string completeFileName = Path.GetFullPath(Path.Combine(destinationDirectoryFullPath, file.FullName));
 
