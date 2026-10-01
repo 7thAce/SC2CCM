@@ -1,6 +1,8 @@
 # Download
 Somehow, people keep finding this through github and not the 100k person Discord, so I'll leave info here.
+
 https://discord.gg/UCDyZyr6gg
+
 Go to #getting-started and download.
 
 # SC2CCM
